@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: 'Josefin Sans', sans-serif;
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Bluehover: hsl(236, 33%, 92%);
+  /*hover*/
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  font-size: 18px;
+}
+
+input[type=radio] {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  width: 18px;
+  height: 18px;
+  border: white;
+  color: transparent;
+}
+
+.container {
+  background-image: url(../images/bg-mobile-dark.jpg);
+  background-color: var(--Very-Dark-Blue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  padding: 3rem 1rem;
+}
+
+.header .row-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.row-one-heading {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.header-row-two {
+  border-radius: 8px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-row-two input[type=text] {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  color: white;
+  border: none;
+  width: 90%;
+  padding: 0.5rem;
+  outline-color: var(--Very-Dark-Grayish-Blue);
+  outline: none;
+}
+
+.tasks-container {
+  width: 100%;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.task-container {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 0.5px solid white;
+}
+
+.task-container input[type=radio] {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  width: 18px;
+  height: 18px;
+  border: white;
+}
+
+.task-container input[type=text] {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  color: white;
+  border: none;
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.task-container .instruction {
+  padding-left: 0.5rem;
+  color: white;
+}
+
+.task-container .delete-task {
+  margin-left: auto;
+}
+
+.tasks-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  padding: 0.75rem;
+}
+
+.tasks-information .task-filters-desktop {
+  display: none;
+}
+
+.task-filters-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.75rem;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-radius: 8px;
+}
+
+.task-filters-mobile .all,
+.task-filters-mobile .active {
+  margin-right: 0.5rem;
+}
+
+.task-filters-mobile .all,
+.task-filters-mobile .active,
+.task-filters-mobile .completed,
+.task-filters-mobile .tasks-left,
+.task-filters-mobile .clear-completed {
+  cursor: pointer;
+}
+
+.task-filters-mobile .all:hover,
+.task-filters-mobile .active:hover,
+.task-filters-mobile .completed:hover,
+.task-filters-mobile .tasks-left:hover {
+  color: var(--Bright-Blue);
+}
+/*# sourceMappingURL=main.css.map */

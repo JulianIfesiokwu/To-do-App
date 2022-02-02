@@ -1,0 +1,121 @@
+@import './config';
+@import './responsive';
+
+.container {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    background-color: var(--Very-Dark-Blue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    padding: 3rem 1rem;
+}
+
+.header .row-one {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.row-one-heading {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.header-row-two {
+    border-radius: 8px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    
+    input[type=text] {
+        background-color: var(--Very-Dark-Grayish-Blue);
+        color: white;
+        border: none;
+        width: 90%;
+        padding: 0.5rem;
+        outline-color:var(--Very-Dark-Grayish-Blue);
+        outline: none;
+    }
+}
+
+.tasks-container {
+    width: 100%;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.task-container {
+    padding: 0.5rem;
+    display: flex;
+    border-bottom: 0.5px solid white;
+    
+    input[type=radio] {
+        vertical-align: middle;
+        margin-left: 0.5rem;
+        width: 18px;
+        height: 18px;
+        border: white;
+    }
+
+    input[type=text] {
+        background-color: var(--Very-Dark-Grayish-Blue);
+        color: white;
+        border: none;
+        width: 80%;
+        padding: 0.5rem;
+        // outline-color:var(--Very-Dark-Grayish-Blue);
+        // outline: none;
+    }
+
+    .instruction {
+        padding-left: 0.5rem;
+        color: white;
+    }
+
+    .delete-task {
+    margin-left: auto;
+    }
+}
+
+.tasks-information {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0.75rem;
+
+    // Hide dektop filters on mobile
+    .task-filters-desktop {
+        display: none;
+    }
+}
+
+.task-filters-mobile {
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 8px;
+
+    .all,
+    .active {
+        margin-right: 0.5rem;
+    }
+    .all,
+    .active,
+    .completed,
+    .tasks-left,
+    .clear-completed {
+        cursor: pointer;
+    }
+    .all:hover,
+    .active:hover,
+    .completed:hover,
+    .tasks-left:hover {
+        color: var(--Bright-Blue);
+    }
+}
+
+
