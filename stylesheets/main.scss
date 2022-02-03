@@ -8,6 +8,7 @@
     background-attachment: fixed;
     background-size: contain;
     padding: 3rem 1rem;
+    min-height: 100vh;
 
     @include mQ(799px) {
         background-repeat: no-repeat;
@@ -95,8 +96,10 @@
 
     .instruction {
         padding-left: 0.5rem;
+        padding-top: 0.25rem;
         color: white;
         width: 85%;
+        font-size: 16px;
 
         @include mQ(479px) {
             width: 93%;
@@ -112,7 +115,7 @@
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
 
     @include mQ(479px) {
         padding: 1rem;

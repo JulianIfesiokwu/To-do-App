@@ -16,50 +16,23 @@
           <div class="header row-one">
             <h1 class="row-one-heading">todo</h1>
             <div class="header row-one-img">
-              <img src="./images/icon-sun.svg" alt="">
+              <img src="./images/icon-sun.svg" alt="" class="light">
             </div>
           </div>
           <div class="header-row-two">
             <div class="create-task-container">
               <input type="radio" disabled>
-              <input type="text" placeholder="Create a new todo...">
+              <input type="text" placeholder="Create a new todo..." class="input">
             </div>
           </div>
           
         </header>
         <main class="main">
           <section class="tasks-container">
-            <div class="task-container">
-              <input type="radio">
-              <p class="instruction">here is one</p>
-              <div class="delete-task-container">
-                <img src="./images/icon-cross.svg" alt="" class="delete-task">
-              </div>
+            <div class="all-tasks">
             </div>
-            <div class="task-container">
-              <input type="radio">
-              <p class="instruction">here is two</p>
-              <div class="delete-task-container">
-                <img src="./images/icon-cross.svg" alt="" class="delete-task">
-              </div>
-            </div>
-            <div class="task-container">
-              <input type="radio">
-              <p class="instruction">here is two</p>
-              <div class="delete-task-container">
-                <img src="./images/icon-cross.svg" alt="" class="delete-task">
-              </div>
-            </div>
-            <div class="task-container">
-              <input type="radio">
-              <p class="instruction">here is two</p>
-              <div class="delete-task-container">
-                <img src="./images/icon-cross.svg" alt="" class="delete-task">
-              </div>
-            </div>
-
             <div class="tasks-information">
-              <p class="tasks-left">5 items left</p>
+              <p class="tasks-left"><span class="amount"></span> items left</p>
               <div class="task-filters-desktop">
                 <p class="all">All</p>
                 <p class="active">Active</p>
@@ -67,6 +40,9 @@
               </div>
               <p class="clear-completed">Clear Completed</p>
             </div>
+
+
+
           </section>
           <div class="task-filters-mobile">
             <p class="all">All</p>
@@ -81,6 +57,9 @@
     </div>
 
   </div>
+
+
+  <script src="./scripts/main.js"></script>
 
 </body>
 </html>

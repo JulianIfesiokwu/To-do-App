@@ -49,6 +49,7 @@ input[type=radio] {
   background-attachment: fixed;
   background-size: contain;
   padding: 3rem 1rem;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 799px) {
@@ -145,8 +146,10 @@ input[type=radio] {
 
 .task-container .instruction {
   padding-left: 0.5rem;
+  padding-top: 0.25rem;
   color: white;
   width: 85%;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 479px) {
@@ -167,7 +170,7 @@ input[type=radio] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
 }
 
 @media screen and (min-width: 479px) {
