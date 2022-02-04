@@ -54,6 +54,7 @@ input[type=radio] {
 
 @media screen and (min-width: 799px) {
   .container {
+    background-image: url(../images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -128,12 +129,13 @@ input[type=radio] {
   border-bottom: 0.01px solid var(--Very-Light-Grayish-Blue);
 }
 
-.task-container input[type=radio] {
+.task-container input[type=checkbox] {
   vertical-align: middle;
   margin-left: 0.5rem;
   width: 18px;
   height: 18px;
   border: white;
+  border-radius: 50%;
 }
 
 .task-container input[type=text] {
@@ -144,12 +146,15 @@ input[type=radio] {
   padding: 0.5rem;
 }
 
+.task-container .strike-through {
+  text-decoration: line-through;
+}
+
 .task-container .instruction {
   padding-left: 0.5rem;
   padding-top: 0.25rem;
   color: white;
   width: 85%;
-  font-size: 16px;
 }
 
 @media screen and (min-width: 479px) {
@@ -184,12 +189,12 @@ input[type=radio] {
 }
 
 .tasks-information .task-filters-desktop .all,
-.tasks-information .task-filters-desktop .active {
+.tasks-information .task-filters-desktop .not-completed {
   margin-right: 0.5rem;
 }
 
 .tasks-information .task-filters-desktop .all,
-.tasks-information .task-filters-desktop .active,
+.tasks-information .task-filters-desktop .not-completed,
 .tasks-information .task-filters-desktop .completed,
 .tasks-information .task-filters-desktop .tasks-left,
 .tasks-information .task-filters-desktop .clear-completed {
@@ -197,7 +202,7 @@ input[type=radio] {
 }
 
 .tasks-information .task-filters-desktop .all:hover,
-.tasks-information .task-filters-desktop .active:hover,
+.tasks-information .task-filters-desktop .not-completed:hover,
 .tasks-information .task-filters-desktop .completed:hover,
 .tasks-information .task-filters-desktop .tasks-left:hover {
   color: var(--Bright-Blue);
@@ -209,6 +214,10 @@ input[type=radio] {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.active {
+  color: var(--Bright-Blue);
 }
 
 .task-filters-mobile {
@@ -225,12 +234,12 @@ input[type=radio] {
 }
 
 .task-filters-mobile .all,
-.task-filters-mobile .active {
+.task-filters-mobile .not-completed {
   margin-right: 0.5rem;
 }
 
 .task-filters-mobile .all,
-.task-filters-mobile .active,
+.task-filters-mobile .not-completed,
 .task-filters-mobile .completed,
 .task-filters-mobile .tasks-left,
 .task-filters-mobile .clear-completed {
@@ -238,7 +247,7 @@ input[type=radio] {
 }
 
 .task-filters-mobile .all:hover,
-.task-filters-mobile .active:hover,
+.task-filters-mobile .not-completed:hover,
 .task-filters-mobile .completed:hover,
 .task-filters-mobile .tasks-left:hover {
   color: var(--Bright-Blue);

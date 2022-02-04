@@ -11,6 +11,7 @@
     min-height: 100vh;
 
     @include mQ(799px) {
+        background-image: url(../images/bg-desktop-dark.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -76,12 +77,13 @@
     display: flex;
     border-bottom: 0.01px solid var(--Very-Light-Grayish-Blue);
     
-    input[type=radio] {
+    input[type=checkbox] {
         vertical-align: middle;
         margin-left: 0.5rem;
         width: 18px;
         height: 18px;
         border: white;
+        border-radius: 50%;
     }
 
     input[type=text] {
@@ -94,12 +96,15 @@
         // outline: none;
     }
 
+    .strike-through {
+        text-decoration: line-through;
+    }
+
     .instruction {
         padding-left: 0.5rem;
         padding-top: 0.25rem;
         color: white;
         width: 85%;
-        font-size: 16px;
 
         @include mQ(479px) {
             width: 93%;
@@ -126,18 +131,20 @@
         display: none;
         
         .all,
-        .active {
+        .not-completed {
             margin-right: 0.5rem;
         }
+
         .all,
-        .active,
+        .not-completed,
         .completed,
         .tasks-left,
         .clear-completed {
             cursor: pointer;
         }
+
         .all:hover,
-        .active:hover,
+        .not-completed:hover,
         .completed:hover,
         .tasks-left:hover {
             color: var(--Bright-Blue);
@@ -149,6 +156,10 @@
     }
 }
 
+.active {
+    color: var(--Bright-Blue);
+}
+
 .task-filters-mobile {
     display: flex;
     color: white;
@@ -158,18 +169,20 @@
     border-radius: 8px;
 
     .all,
-    .active {
+    .not-completed {
         margin-right: 0.5rem;
     }
+
     .all,
-    .active,
+    .not-completed,
     .completed,
     .tasks-left,
     .clear-completed {
         cursor: pointer;
     }
+
     .all:hover,
-    .active:hover,
+    .not-completed:hover,
     .completed:hover,
     .tasks-left:hover {
         color: var(--Bright-Blue);

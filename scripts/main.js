@@ -2,13 +2,17 @@ const themeIcon = document.querySelector('.light')
 const input = document.querySelector('.input')
 const tasksLeft = document.querySelector('.amount')
 const tasksContainer = document.querySelector('.all-tasks')
+const taskFilters = document.querySelectorAll('.filter')
+// const taskFilters = document.querySelector('.task-filters-mobile')
 
 const taskList = []
 tasksLeft.textContent = 0
 
 
 // Update task remaining
-function updateTaskRemaining() {
+function updateTaskListLength() {
+    taskList.Left - 1
+    console.log(taskList.length)
     tasksLeft.textContent = taskList.length < 1 ? 0 : `${taskList.length}`;
 }
 
@@ -27,12 +31,22 @@ function deleteTask(task, e) {
     let targetTask = e.target.parentElement.parentElement
     taskList.length - 1
     targetTask.remove()
-    updateTaskRemaining()
+    updateTaskListLength()
 }
 
-function markTask(e) {
-    console.log(e.target.checked, 'marked')
-    e.target.checked === true ? false : true
+function markTask(e, task) {
+    const targetInput = e.target
+    const toBeMarked = targetInput.nextElementSibling
+    
+    if(targetInput.checked === true) { 
+        toBeMarked.classList.add('strike-through')
+        task.complete = true
+        console.log(task)
+    } else { 
+        toBeMarked.classList.remove('strike-through')
+        task.complete = !true
+        console.log(task)
+    }
 }
 
 // Make a task UI
@@ -75,8 +89,8 @@ function createTask(taskInstruction) {
     taskContainer.classList.add('task-container')
     // create check button
     const checkButton = document.createElement('input')
-    checkButton.setAttribute('type', 'radio')
-    checkButton.onclick = ( (e) => markTask(e) )
+    checkButton.setAttribute('type', 'checkbox')
+    checkButton.onclick = ( (e, task) => markTask(e, task) )
     // create p tag for task
     const taskContentHolder = document.createElement('p')
     taskContentHolder.classList.add('instruction')
@@ -100,9 +114,12 @@ function createTask(taskInstruction) {
     taskList.push(taskContainer)
 
     // Update tasks remaining
-    updateTaskRemaining()
-    
+    updateTaskListLength()    
 
+}
+
+function filterTask(criteria) {
+    console.log('yas')
 }
 
 
@@ -119,3 +136,14 @@ themeIcon.addEventListener('click', () => {
 })
 
 input.addEventListener("keyup", acceptTask)
+taskFilters.forEach(taskFilter => {
+    if( taskFilter.classList.contains('all') ) {
+        taskFilter.addEventListener('click', (all) => filterTask(all))
+    }
+    if( taskFilter.classList.contains('not-completed') ) {
+        taskFilter.addEventListener('click', (notCompleted) => filterTask(notCompleted))
+    }
+    if( taskFilter.classList.contains('completed') ) {
+        taskFilter.addEventListener('click', (completed) => filterTask(completed))
+    }
+});
