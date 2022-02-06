@@ -8,35 +8,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 :root {
     font-family: 'Josefin Sans', sans-serif;
-
     // Primary
     --Bright-Blue: hsl(220, 98%, 61%);
     --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
-
-    // Light Theme
-
-    --Very-Light-Gray: hsl(0, 0%, 98%);
-    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
-    --Light-Grayish-Blue: hsl(233, 11%, 84%);
-    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
-    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-
-    // Dark Theme
-
-    --Very-Dark-Blue: hsl(235, 21%, 11%);
-    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-    --Light-Grayish-Blue: hsl(234, 39%, 85%);
-    --Light-Grayish-Bluehover: hsl(236, 33%, 92%); /*hover*/
-    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
-
     font-size: 18px;
 }
 
@@ -48,5 +24,4 @@ input[type=radio] {
     border: white;
     color: transparent;
     cursor: pointer;
-    // accent-color: var(--Very-Light-Grayish-Blue);
 }

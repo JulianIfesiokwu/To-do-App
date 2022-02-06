@@ -8,6 +8,23 @@ const taskFilters = document.querySelectorAll('.filter')
 const taskList = []
 tasksLeft.textContent = 0
 
+function dragstart_handler (e) {
+    // e.preventDefault()
+    e.dataTransfer.setData("text/html", e.target.outerHTML)
+    e.dataTransfer.dropEffect = "move"
+    console.log(e.target.outerHTML)
+}
+
+function drop_handler(e) {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text/html");
+    e.target.appendChild(document.querySelector('.all-tasks'));
+}
+
+function dragover_handler(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move"
+  }
 
 // Update task remaining
 function updateTaskListLength() {
@@ -87,6 +104,10 @@ function createTask(taskInstruction) {
     // add UI
     const taskContainer = document.createElement('div')
     taskContainer.classList.add('task-container')
+    taskContainer.setAttribute('draggable', 'true')
+    if(taskContainer) {
+        taskContainer.addEventListener('dragstart', (e) => dragstart_handler(e))
+    }
     // create check button
     const checkButton = document.createElement('input')
     checkButton.setAttribute('type', 'checkbox')
@@ -129,9 +150,11 @@ themeIcon.addEventListener('click', () => {
     if(result) {
         themeIcon.setAttribute('src', './images/icon-sun.svg')
         themeIcon.classList.replace('dark', 'light')
+        document.documentElement.setAttribute('data-theme', 'dark')
     } else {
         themeIcon.setAttribute('src', './images/icon-moon.svg')
         themeIcon.classList.replace('light', 'dark')
+        document.documentElement.setAttribute('data-theme', 'light')
     }
 })
 
@@ -147,3 +170,6 @@ taskFilters.forEach(taskFilter => {
         taskFilter.addEventListener('click', (completed) => filterTask(completed))
     }
 });
+
+tasksContainer.addEventListener('ondrop', (event) => drop_handler(event) )
+tasksContainer.addEventListener('ondragover', (event) => dragover_handler(event) )

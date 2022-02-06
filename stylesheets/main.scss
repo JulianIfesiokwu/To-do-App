@@ -1,23 +1,26 @@
 @import './config';
 @import './responsive';
+@import './color-themes';
 
 .container {
-    background-image: url(../images/bg-mobile-dark.jpg);
-    background-color: var(--Very-Dark-Blue);
+    background-color: var(--bg-colour);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
     padding: 3rem 1rem;
     min-height: 100vh;
 
-    @include mQ(799px) {
-        background-image: url(../images/bg-desktop-dark.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+    .bg-container {
+        background-image: var(--bg-image);
         height: 40vh;
-        background-color: var(--Very-Dark-Blue);
+        width: 100%;
+
+        @include mQ(480px) {
+            background-image: url(../images/bg-mobile-dark.jpg);
+            height: 40vh;
+        }
     }
+
 }
 
 .app-container {
@@ -50,12 +53,12 @@
 
 .header-row-two {
     border-radius: 8px;
-    background-color: var(--Very-Dark-Grayish-Blue);
+    background-color: var(--VeryDarkGrayishBlue);
     padding: 0.5rem;
     margin-bottom: 1.5rem;
     
     input[type=text] {
-        background-color: var(--Very-Dark-Grayish-Blue);
+        background-color: var(--VeryDarkGrayishBlue);
         color: white;
         border: none;
         width: 90%;
@@ -67,7 +70,7 @@
 
 .tasks-container {
     width: 100%;
-    background-color: var(--Very-Dark-Grayish-Blue);
+    background-color: var(--bg-todo);
     border-radius: 8px;
     margin-bottom: 1.5rem;
 }
@@ -75,7 +78,7 @@
 .task-container {
     padding: 0.5rem;
     display: flex;
-    border-bottom: 0.01px solid var(--Very-Light-Grayish-Blue);
+    border-bottom: 0.01px solid var(--bg-todo);
     
     input[type=checkbox] {
         vertical-align: middle;
