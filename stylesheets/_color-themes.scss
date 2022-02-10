@@ -2,7 +2,7 @@ html[data-theme='dark'] {
     --bg--image: background-image: url(../images/bg-desktop-dark.jpg);
     --bg--mobile--dark: background-image: url(../images/bg-mobile-dark.jpg);
 
-    --bg-image: hsl(235, 21%, 11%);
+    --bgColor: hsl(235, 21%, 11%);
     --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
     --Light-Grayish-Blue: hsl(234, 39%, 85%);
     --Light-Grayish-Bluehover: hsl(236, 33%, 92%); /*hover*/
@@ -16,7 +16,7 @@ html[data-theme='light'] {
         --bg--light: background-image: url(../images/bg-desktop-light.jpg);
         --bg--mobile--light: background-image: url(../images/bg-mobile-light.jpg);
     
-        --bg-colour: hsl(0, 0%, 98%);
+        --bgColour: hsl(0, 0%, 98%);
         --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
         --bg-todo: hsl(233, 11%, 84%);
         --Dark-Grayish-Blue: hsl(236, 9%, 61%);

@@ -3,16 +3,16 @@ const input = document.querySelector('.input')
 const tasksLeft = document.querySelector('.amount')
 const tasksContainer = document.querySelector('.all-tasks')
 const taskFilters = document.querySelectorAll('.filter')
-// const taskFilters = document.querySelector('.task-filters-mobile')
+const clearBtn = document.querySelector('.clear-completed')
 
-const taskList = []
+let taskList = []
 tasksLeft.textContent = 0
 
 function dragstart_handler (e) {
     // e.preventDefault()
     e.dataTransfer.setData("text/html", e.target.outerHTML)
     e.dataTransfer.dropEffect = "move"
-    console.log(e.target.outerHTML)
+    // console.log(e.target.outerHTML)
 }
 
 function drop_handler(e) {
@@ -29,7 +29,6 @@ function dragover_handler(e) {
 // Update task remaining
 function updateTaskListLength() {
     taskList.Left - 1
-    console.log(taskList.length)
     tasksLeft.textContent = taskList.length < 1 ? 0 : `${taskList.length}`;
 }
 
@@ -65,35 +64,6 @@ function markTask(e, task) {
         console.log(task)
     }
 }
-
-// Make a task UI
-// function taskUI(task) {
-//     // create task container
-//     const taskContainer = document.createElement('div')
-//     taskContainer.classList.add('task-container')
-//     // create check button
-//     const checkButton = document.createElement('input')
-//     checkButton.setAttribute('type', 'radio')
-//     // create p tag for task
-//     const taskContentHolder = document.createElement('p')
-//     taskContentHolder.classList.add('instruction')
-//     taskContentHolder.textContent = `${task.taskContent}`
-//     // create delete button container
-//     const deleteContainer = document.createElement('div')
-//     deleteContainer.classList.add('delete-task-container')
-//     // create delete button
-//     const deleteButton = document.createElement('img')
-//     deleteButton.setAttribute('src', './images/icon-cross.svg')
-//     deleteButton.classList.add('delete-task')
-//     // Append all parts of UI
-//     deleteContainer.appendChild(deleteButton)
-
-//     taskContainer.append(checkButton, taskContentHolder, deleteContainer)
-//     console.log(tasksContainer)
-
-//     return taskContainer
-// }
-
 
 // Create a task
 function createTask(taskInstruction) {
@@ -140,7 +110,13 @@ function createTask(taskInstruction) {
 }
 
 function filterTask(criteria) {
-    console.log('yas')
+    // console.log('yas')
+}
+
+function clearList () {
+    taskList = []
+    tasksContainer.textContent = ''
+    tasksLeft.textContent = 0
 }
 
 
@@ -173,3 +149,4 @@ taskFilters.forEach(taskFilter => {
 
 tasksContainer.addEventListener('ondrop', (event) => drop_handler(event) )
 tasksContainer.addEventListener('ondragover', (event) => dragover_handler(event) )
+clearBtn.addEventListener('click', clearList)
