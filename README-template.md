@@ -98,8 +98,12 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+-(https://dev.to/s0xzwasd/using-scss-css-variables-in-react-322j) - This helped me understand and use sass varibales in react.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+
+https://stackoverflow.com/questions/52900207/how-to-use-scss-variables-into-my-react-components
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
